@@ -15,7 +15,7 @@ GameLogic::~GameLogic() {
 }
 
 void addScene(Scene newScene) {
-    this->sceneList.push(newScene);
+    this->sceneList.push_back(newScene);
 }
 
 void removeScene(int index) {
@@ -33,8 +33,8 @@ void playScenes() {
 
 void initalize() {
     Scene startScreen = new Scene(/*Start Menu Parameters*/);
-    this->sceneList.push(startScreen);
-    this->sceneList.at(0).startScene();
+    this->sceneList.push_back(startScreen);
+    this->sceneList.back().startScene();
 }
 
 void clearScenes() {
